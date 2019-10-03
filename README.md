@@ -1,20 +1,18 @@
-# certificate_ssl_generator
-generate SSL certificate with keytool and openssl utilities for https connector apache, tomcat, ...
+# Certificate_ssl_generator
+Mass generate SSL certificate with keytool and openssl utilities for https connector apache, tomcat, ...
+Work / Test on Windows 10 PC
+
+# Pre requisite :
+* openssl-1.0.2d-fips-2.0.10
+  * DL : https://freefr.dl.sourceforge.net/project/openssl/openssl-1.0.2d-fips-2.0.10/openssl-1.0.2d-fips-2.0.10.zip
+  * unzip on the root directory
+* java ( no specific version )( pre configured with C:\Program Files (x86)\Java\jre1.8.0_144 )
+  *	JDK or JRE ( only needed for keytool command )
 
 
+# Directory
 
-#pre requisite :
-*openssl-1.0.2d-fips-2.0.10
-*java ( no version )
-
-OpenSSL :
-	DL : https://freefr.dl.sourceforge.net/project/openssl/openssl-1.0.2d-fips-2.0.10/openssl-1.0.2d-fips-2.0.10.zip
-	unzip at the root directory
-Java :
-	JDK or JRE
-
-
-Example of arborescence :
+Example of tree :
 
 W:\certificate_ssl_generator
 ├───CA_cert
@@ -32,15 +30,27 @@ W:\certificate_ssl_generator
 │           ├───man5
 │           └───man7
 └───output
-    ├───Cedre
+    ├───Dorier
     │   ├───PRE
     │   └───PRO
-    └───PFE
-        ├───PRE
-        └───PRO
+
 
 # Need 
-Pour Apache :
+Apache :
+* CER and KEY files
 
-# Usage
-run 01
+Tomcat :
+ * JKS and password
+ * CER and KEY files
+
+IIS :
+* P12 file
+
+
+# Instructions / Usage
+    1/ Fill the CSV file with needed information
+    2/ Execute 01-generation_certificat.bat
+    3/ Sign CSR file by the autority
+    4/ Put CER file on the same directory
+    5/ Execute 02-import_certificat.bat
+    6/ Enjoy !
