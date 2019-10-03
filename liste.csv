@@ -1,0 +1,3 @@
+#Nom_application;Environnement;Mot_de_passe;Alias;Nom_output;URL
+Tomcat;PRE;changeit;apache_tomcat;tomcat;test.dorier.fr
+Tomcat;PRO;changed;apache_tomcat;tomcat;www.dorier.fr
