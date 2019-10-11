@@ -51,7 +51,7 @@ IF NOT EXIST %VAR_PATH_OUTPUT% (
 )
 
 
-for /f "skip=1 tokens=1,2,3,4,5,6 delims=;" %%a  in ('type liste.csv') do (
+for /f "tokens=1,2,3,4,5,6 delims=;" %%a  in ('type liste.csv ^| findstr /V /B #') do (
 	echo "======================="
 	REM echo Application    : %%a
 	REM echo Environnement  : %%b

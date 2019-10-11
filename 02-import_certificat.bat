@@ -44,7 +44,7 @@ set OPENSSL_CONF=%VAR_PATH_WORK%\openssl-1.0.2d-fips-2.0.10\share\openssl.cnf
 REM # ========================================================================= 
 REM # Main
 REM # =========================================================================
-for /f "skip=1 tokens=1,2,3,4,5,6 delims=;" %%a  in ('type liste.csv') do (
+for /f "tokens=1,2,3,4,5,6 delims=;" %%a  in ('type liste.csv ^| findstr /V /B #') do (
 	echo "======================="
 	echo Application    : %%a
 	REM echo Environnement  : %%b
